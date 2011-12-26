@@ -1,2 +1,73 @@
-test
-/n second test
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=500, initial-scale=1">
+	<title></title>
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.0/jquery.min.js"></script>
+	<script type="text/javascript" src="jquery.transit.min.js"></script>
+	<script type="text/javascript">
+	$(function(){
+		var o=$('#one');
+		var t=$('#two');
+		var oLink = $('#pageOneLink');
+		var tLink=$('#pageTwoLink');
+
+		$('#pageTwoLink').click(function(){
+			$('#two').transition({ x: '-=240px' },function(){
+				$('#one').transition({ x: '+=240px' });
+			});
+			console.log('test');
+			return false;
+		});	
+	
+		$('#pageOneLink').click(function(){
+			$('#one').transition({ x: '-=240px' },function(){
+				$('#two').transition({ x: '+=240px' });
+			});
+			console.log('test');
+			return false;
+		});	
+	
+	})
+	
+	</script>
+	
+	<style type="text/css">
+	div{
+		width:240px;
+		height:600px;
+		float:left;
+		display:inline;
+		transition:left 500;
+		-moz-transition:left 500;
+		-webkit-transition:left .5s; /* Safari and Chrome */
+		position:absolute;
+		top:0px;
+	}
+	#one{
+		background:red;
+	}
+	#two{
+		background:green;
+	}
+	
+	.hidden{
+		left:240px;
+	}
+	
+	.display{
+		left:0px;
+	}
+	
+	</style>
+</head>
+<body>
+	<div id="one" class="display">
+		<a href="#" title="" id="pageTwoLink">go to page 2</a>
+	</div>
+	<div id="two" class="hidden">
+		<a href="#" title="" id="pageOneLink">go to page 1</a>
+	</div>
+</body>
+</html>
