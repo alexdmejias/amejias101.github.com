@@ -13,7 +13,7 @@
 		var oLink = $('#pageOneLink');
 		var tLink=$('#pageTwoLink');
 
-		$('#pageTwoLink').click(function(){
+		$('#pageTwoLink, .button').click(function(){
 			$('#two').transition({ x: '-=320px',duration: '100ms' },function(){
 				$('#one').transition({ x: '+=320px',duration: '100ms'  });
 			});
