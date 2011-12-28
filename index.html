@@ -34,11 +34,14 @@
 	</script>
 	
 	<style type="text/css">
-	*{outline:0}
-	body{width:320px;}
+	*{
+		outline:0
+	}
+	body{
+		margin:0;
+		padding:0;
+	}
 	div{
-		width:320px;
-		height:600px;
 		float:left;
 		display:inline;
 		transition:left 50;
@@ -46,9 +49,13 @@
 		-webkit-transition:left .05s; /* Safari and Chrome */
 		position:absolute;
 		top:0px;
+		height:500px;
 	}
 	#main{
+		padding:0;
+		margin:0;
 		width:320px;
+		max-width:320px;
 		overflow:hidden;
 	}
 	#one{
@@ -79,12 +86,6 @@
 				<input type="button" class="num" value="1"/>
 				<input type="button" class="num" value="2"/>
 				<input type="button" class="num" value="3"/>
-				<input type="button" class="num" value="4"/>
-				<input type="button" class="num" value="5"/>
-				<input type="button" class="num" value="6"/>
-				<input type="button" class="num" value="7"/>
-				<input type="button" class="num" value="8"/>
-				<input type="button" class="num" value="9"/>
 			</form>
 		</div>
 		<div id="two" class="hidden">
