@@ -14,16 +14,16 @@
 		var tLink=$('#pageTwoLink');
 
 		$('#pageTwoLink').click(function(){
-			$('#two').transition({ x: '-=320px' },function(){
-				$('#one').transition({ x: '+=320px' });
+			$('#two').transition({ x: '-=320px',duration: '100ms' },function(){
+				$('#one').transition({ x: '+=320px',duration: '100ms'  });
 			});
 			console.log('test');
 			return false;
 		});	
 	
 		$('#pageOneLink').click(function(){
-			$('#one').transition({ x: '-=320px' },function(){
-				$('#two').transition({ x: '+=320px' });
+			$('#one').transition({ x: '-=320px' ,duration: '100ms' },function(){
+				$('#two').transition({ x: '+=320px' ,duration: '100ms' });
 			});
 			console.log('test');
 			return false;
@@ -46,7 +46,7 @@
 		display:inline;
 		transition:left 50;
 		-moz-transition:left 50;
-		-webkit-transition:left .05s; /* Safari and Chrome */
+		-webkit-transition:left 150000; /* Safari and Chrome */
 		position:absolute;
 		top:0px;
 		height:500px;
